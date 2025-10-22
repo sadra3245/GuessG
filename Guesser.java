@@ -37,8 +37,8 @@ public class Guesser{
    * rules() method, next the doGuesses() method.
    */
   public void start(){
-    // call the rules method here
-    // call the doGuesses() method here
+	rules();    // call the rules method here
+    	doGuesses();// call the doGuesses() method here
   }
 
   private void rules(){
@@ -60,8 +60,12 @@ public class Guesser{
    * the player.
    */
   private String getReply(){
-    String reply = null;
-    // Write code here which reads a String from the console.
+    String reply;
+    reply = System.console().readLine();
+    while (!reply.equalsIgnoreCase("T") && !reply.equalsIgnoreCase("F")) {
+	System.out.println("please answer 'T' or 'F'");
+	reply = System.console().readLine();
+    }	// Write code here which reads a String from the console.
     // As long as it is not a valid reply (one of "T" and "F")
     // write an error message, and read a new reply.
     // When you have gotten a valid reply, return it.
