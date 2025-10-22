@@ -1,0 +1,22 @@
+
+
+* Vad är pull respektive push?
+
+  Pull är när du laddar ner ifrån fjärrdataserven til din lokala dator
+
+  däremot push är motsatsen där du matar/skickar ifrån dina lokala filer till fjärdataserven.
+
+
+
+* När använder man log respektive status?
+
+
+ Log används för att kunna se historiken av ens gits commits.
+
+ Status används för att kunna se branchens nuläge till exempel om det behövs en commit eller en add att göras. 
+
+
+
+* Vad är en Git branch och varför är de viktiga
+
+
