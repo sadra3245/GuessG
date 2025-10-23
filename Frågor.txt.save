@@ -20,3 +20,44 @@
 * Vad är en Git branch och varför är de viktiga
 
 
+En git branch är en gren som pekar på en commit i historiken. dess syfte är att göra ett projekt tillgänglig för flera individer att jobba på.
+
+Till exempel så kan 3 personer jobbar på ett projekt med 3 personliga branches som de har gjort själva.
+
+det minskar risken för att sabotera själva projektet och dess stabilitet.
+
+
+* Det finns flera sätt att rulla tillbaka koden till ett tidigare tillstånd. Förklara skillnaden
+
+commit 6b12b53c8b96e7830032bfe5f6569a0e74163bc4 (HEAD -> main)
+
+Author: Sadra Javad <sadramohtork@gmail.com>
+
+Date:   Thu Oct 23 22:08:36 2025 +0200
+
+
+
+    för övnings syfte
+
+
+
+commit b92eed06b1cc55ee138147693db63eded68dfdcf (origin/test, origin/main, test)
+
+Merge: 554fa32 1bf0dde
+
+Author: Sadra Javad <sadramohtork@gmail.com>
+
+Date:   Wed Oct 22 21:55:16 2025 +0200
+
+
+
+    "test" Merge branch 'test'
+
+
+
+git reset --soft  b92eed06b1cc55ee138147693db63eded68dfdcf
+
+
+Här har jag kört git log som visar en del av min commit historik och här jag av "misstag" skrivit in något som jag ångrar. jag valde att skriva git reset --soft 'hash koden' (förra commiten)
+
+för att jag har inte ännut pushat den till fjärrdataservern än. Men om jag hade skickat den till fjärrserver med hjälp av 'git push' då hade jag behövt köra git revert 'hash koden' och så skrevs det en ny commit och därefter kan man git pusha till fjärrdataservern.
