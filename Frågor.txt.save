@@ -55,9 +55,32 @@ Date:   Wed Oct 22 21:55:16 2025 +0200
 
 
 
-git reset --soft  b92eed06b1cc55ee138147693db63eded68dfdcf
+git reset --hard  b92eed06b1cc55ee138147693db63eded68dfdcf
 
 
-Här har jag kört git log som visar en del av min commit historik och här jag av "misstag" skrivit in något som jag ångrar. jag valde att skriva git reset --soft 'hash koden' (förra commiten)
+Här har jag kört git log som visar en del av min commit historik och här jag av "misstag" skrivit in något som jag ångrar. jag valde att skriva git reset --hard 'hash koden' (förra commiten)
 
 för att jag har inte ännut pushat den till fjärrdataservern än. Men om jag hade skickat den till fjärrserver med hjälp av 'git push' då hade jag behövt köra git revert 'hash koden' och så skrevs det en ny commit och därefter kan man git pusha till fjärrdataservern.
+
+med att jag har användt git reset --hard så går commiten tillbaka och all kod förändras till det föregående stagen. 
+
+git revert 'hashcode' kan användas för att ångra ett commit och dess kod-görande genom att skapa ett ny commit som. 
+
+exempel
+
+
+A - B - C 
+
+i detta fallet ångrar jag commiten  och dess kod-
+
+då kör jag git revert, vilket gör motsatsen av commiten 'C'
+
+så då blir commit historiken: 
+A - B - C - D
+
+git revert tar ej bort commit C som vissa command kan göra så som git reset.
+
+men istället skapar en ny som är motsatsen.
+
+
+
